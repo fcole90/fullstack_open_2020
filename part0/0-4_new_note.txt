@@ -1,6 +1,6 @@
 note over browser:
 user writes "my note" in the form and
-clicks Send
+clicks Save
 end note
 browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note - { note: "my_note" }
 note over server:
