@@ -1,0 +1,13 @@
+note over browser:
+user writes "my note" in the form and
+clicks Send
+--------------------
+browser adds the new note and redraws all of them,
+then sends the new note as a request to server
+end note
+browser->server: HTTP POST "/new_note_spa" | Content-Type: application/JSON | Payload: {content: "my note", date: "..."}
+note over server:
+server receives form content and 
+answers with Created
+end note
+server->browser: HTTP Status 201: Created
